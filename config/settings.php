@@ -2,5 +2,5 @@
 
 return [
     'slider_image' => 'sliders',
-    'home_port_count' => 5,
+    'home_port_count' => 4,
 ];

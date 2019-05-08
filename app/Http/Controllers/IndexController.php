@@ -32,7 +32,7 @@ class IndexController extends DnvcompController
         $content = view(env('DNVCOMP').'.content')->with('portfolios',$portfolios)->render();
         $this->vars = array_add($this->vars,'content',$content);
 
-        $members = view(env('DNVCOMP').'.members')->render();
+        $members = view(env('DNVCOMP').'.members')->with('portfolios',$portfolios)->render();
         $this->vars = array_add($this->vars,'members',$members);
 
         $sliderItem = $this->getSliders();
