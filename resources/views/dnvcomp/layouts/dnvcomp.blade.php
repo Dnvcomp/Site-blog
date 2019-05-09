@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="ru">
 <head>
-    <title>Home</title>
+    <meta name="description" content="{{ (isset($meta_desc)) ? $meta_desc : '' }}">
+    <meta name="keywords" content="{{ (isset($keywords)) ? $keywords : '' }}">
+    <title>{{ $title or 'Dnvcomp' }}</title>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="{{ asset(env('DNVCOMP')) }}/img/logos/logo-shortcut.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -47,7 +49,7 @@
 
 <!-- Blog post-->
 <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
-    <div class="row">
+    <div class="row-{{ isset($bar) ? $bar : 'no' }}">
         @yield('content')
         @yield('bar')
     </div>

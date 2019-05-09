@@ -13,11 +13,14 @@ class DnvcompController extends Controller
     protected $s_rep;
     protected $a_rep;
     protected $m_rep;
+    protected $keywords;
+    protected $meta_desc;
+    protected $title;
     protected $template;
     protected $vars = array();
     protected $contentRightBar = false;
     protected $contentLeftBar = false;
-    protected $bar = false;
+    protected $bar = 'no';
 
     public function __construct(MenusRepository $m_rep)
     {
@@ -38,6 +41,12 @@ class DnvcompController extends Controller
             $rightBar =view(env('DNVCOMP').'.rightBar')->with('content_rightBar',$this->contentRightBar)->render();
             $this->vars = array_add($this->vars,'rightBar',$rightBar);
         }
+
+        $this->vars = array_add($this->vars,'bar',$this->bar);
+
+        $this->vars = array_add($this->vars,'keywords',$this->keywords);
+        $this->vars = array_add($this->vars,'meta_desc',$this->meta_desc);
+        $this->vars = array_add($this->vars,'title',$this->title);
 
         $footer = view(env('DNVCOMP').'.footer')->render();
         $this->vars = array_add($this->vars,'footer',$footer);

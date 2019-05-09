@@ -42,6 +42,10 @@ class IndexController extends DnvcompController
         $sliders = view(env('DNVCOMP').'.slider')->with('sliders',$sliderItem)->render();
         $this->vars = array_add($this->vars,'sliders',$sliders);
 
+        $this->keywords = 'Home page';
+        $this->meta_desc = 'Home page';
+        $this->title = 'home page';
+
         $articles = $this->getArticles();
         $this->contentRightBar = view(env('DNVCOMP').'.indexBar')->with('articles',$articles)->render();
 

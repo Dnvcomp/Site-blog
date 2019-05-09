@@ -1,7 +1,7 @@
 <!-- Right Side -->
     <div class="blog-post-left">
         @if($articles)
-            <h4>Recent Posts</h4>
+            <h4>{{ trans('ru.from_blog') }}</h4>
             @foreach($articles as $article)
                 <div class="recent-posts">
                     <div class="row">
