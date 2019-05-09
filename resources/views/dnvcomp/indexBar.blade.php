@@ -6,7 +6,7 @@
                 <div class="recent-posts">
                     <div class="row">
                         <div class="col-md-5 col-sm-5 col-xs-12 recent-posts-img">
-                            <img src="{{ asset(env('DNVCOMP')) }}/img/articles/{{ $article->img->mini }}" alt="blog-image">
+                            <img src="{{ asset(env('DNVCOMP')) }}/img/articles/{{ $article->img->mini }}" style="border-radius: 7px;" alt="blog-image">
                         </div>
 
                         <div class="col-md-7 col-sm-7 col-xs-12 recent-posts-text">
