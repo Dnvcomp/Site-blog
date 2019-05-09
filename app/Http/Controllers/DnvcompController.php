@@ -34,6 +34,11 @@ class DnvcompController extends Controller
         $navigation = view(env('DNVCOMP').'.navigation')->with('menu',$menu)->render();
         $this->vars = array_add($this->vars,'navigation',$navigation);
 
+        if ($this->contentRightBar) {
+            $rightBar =view(env('DNVCOMP').'.rightBar')->with('content_rightBar',$this->contentRightBar)->render();
+            $this->vars = array_add($this->vars,'rightBar',$rightBar);
+        }
+
         $footer = view(env('DNVCOMP').'.footer')->render();
         $this->vars = array_add($this->vars,'footer',$footer);
 

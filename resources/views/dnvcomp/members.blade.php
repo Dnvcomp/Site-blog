@@ -9,11 +9,11 @@
                                 <div class="team-member-image">
                                     <img src="{{ asset(env('DNVCOMP')) }}/img/projects/{{ $item->img->max }}" style="width: 262px; height: 195px;" alt="River">
                                     <div class="team-member-overlay">
-                                        <div class="team-member-content">
+                                        <!--div class="team-member-content">
                                             <a href="#"><i class="fa fa-facebook-official"></i></a>
                                             <a href="#"><i class="fa fa-twitter"></i></a>
                                             <a href="#"><i class="fa fa-instagram"></i></a>
-                                        </div>
+                                        </div -->
                                     </div>
                                 </div>
                                 <div class="team-member-name">
