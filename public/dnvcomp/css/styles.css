@@ -591,9 +591,8 @@ a) Service Grid
 ----------------------*/
 .service-grid{
 	background: #fff;
-	border: 1px solid #e6e6e6;
+	color: #0e7a3e;
 	margin: 15px 0px 15px 0px;
-	border-radius: 10px;
 	overflow: hidden;
 }
 
@@ -620,7 +619,7 @@ a) Service Grid
 .service-grid a{
 	font-size: 14px;
 	font-weight: 700;
-	color: #18ba60;
+	color: #0e7a3e;
 }
 .service-grid a:after{
 	content: " \f105";
