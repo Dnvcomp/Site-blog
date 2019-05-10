@@ -18,7 +18,7 @@
                             <p>{!! $article->desc !!}</p>
                         </div>
                     </div>
-                    <a class="service-grid" href="#">Read more</a>
+                    <a class="service-grid" href="{{ route('articles.show',['alias'=>$article->alias]) }}">{{ Lang::get('ru.read_more') }}</a>
                     <br>
 
                     <div class="blog-post-info pull-right">
@@ -36,12 +36,39 @@
                     <div class="blog-post-info pull-right">
                         <i class="icon-calendar-6"></i><span>{{ $article->created_at->format('d F Y') }}</span>
                     </div>
-
+                    <br>
                     <div class="blog-post-share"></div>
                     <div class="mt-70"></div>
                 </blockquote>
             </div>
         @endforeach
+        <!-- Pagination -->
+            <nav aria-label="Pagination">
+                <ul class="pager">
+
+                    @if($articles->lastPage() > 1)
+                        @if($articles->currentPage() !== 1)
+                            <li><a href="{{ $articles->url(($articles->currentPage() - 1)) }}">{{ Lang::get('pagination.previous') }}</a></li>
+                        @endif
+
+                        @for($i = 1; $i <= $articles->lastPage(); $i++ )
+                            @if($articles->currentPage() == $i)
+                                <li><a class="disabled">{{ $i }}</a></li>
+                            @else
+                                    <li><a href="{{ $articles->url($i) }}">{{ $i }}</a></li>
+                            @endif
+                        @endfor
+
+                        @if($articles->currentPage() !== $articles->lastPage())
+                                <li><a href="{{ $articles->url(($articles->currentPage() + 1)) }}">{{ Lang::get('pagination.next') }}</a></li>
+                            @endif
+                    @endif
+
+                </ul>
+            </nav>
+            <!-- //Pagination -->
     </div>
+    @else
+    {!! Lang::get('ru.articles_no') !!}
 @endif
 <!-- // Articles left side -->

@@ -1,5 +1,5 @@
-# Create Dnvcomp blog
-##Creating a corporate blog to add articles and materials.
+<h1>Create Dnvcomp blog</h1>
+<h2>Creating a corporate blog to add articles and materials.</h2>
 
 <p>1.1 Content update and settings framework Laravel</p>
 <p>1.2 Update images and create files in json decode</p>
@@ -7,3 +7,4 @@
 <p>1.4 The russian localization and add meta tegs</p>
 <p>1.5 The home page blog.</p>
 <p>1.6 The add comments, authors, data.</p>
+<p>1.7 Creating pagination and limiting article entries</p>
