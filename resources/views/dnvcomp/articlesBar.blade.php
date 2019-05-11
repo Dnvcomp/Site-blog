@@ -19,8 +19,26 @@
         @endforeach
     @endif
 </div>
-<div class="blog-post-left about">
-    <!--  Left about articles page -->
-</div>
-</div>
 <!-- // Right Side -->
+
+<!-- Recent comments -->
+@if(!$comments->isEmpty())
+<div class="blog-post-left about">
+    <h4>{{ Lang::get('ru.recent_comments') }}</h4>
+    @foreach($comments as $comment)
+    <div class="recent-posts">
+        <div class="row">
+            <div class="avatar">
+                @set($hash,($comment->email) ? md5($comment->email) : $comment->user->email)
+                <img src="https://www.gravatar.com/avatar/{{ $hash }}?d=mm&s=55" class="avatar" alt="Avatar">
+            </div>
+
+            <a href="{{ route('articles.show',['alias'=>$comment->article->alias]) }}">{{ isset($comment->user) ? $comment->user->name : $comment->name }}</a><strong>&nbsp;&nbsp;</strong>
+            <a class="title" href="{{ route('articles.show',['alias'=>$comment->article->alias]) }}">{{ $comment->article->title }}</a>
+        </div>
+    </div>
+    @endforeach
+</div>
+@endif
+<!-- // Recent comments -->
+

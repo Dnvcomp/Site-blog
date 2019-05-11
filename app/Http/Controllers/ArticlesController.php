@@ -38,6 +38,10 @@ class ArticlesController extends DnvcompController
     public function getComments($take)
     {
         $comments = $this->c_rep->get(['text','name','email','site','article_id','user_id'],$take);
+
+        if ($comments) {
+            $comments->load('article','user');
+        }
         return $comments;
     }
 
@@ -52,7 +56,7 @@ class ArticlesController extends DnvcompController
         $articles = $this->a_rep->get(['id','title','alias','created_at','img','desc','user_id','category_id'],false,true);
 
         if ($articles) {
-            //$articles->load('user','category','commenys');
+            $articles->load('user','category','comments');
         }
         return $articles;
     }

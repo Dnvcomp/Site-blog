@@ -2091,3 +2091,34 @@ blockquote i{
 .bottom-icons a i:hover{
 	color: #18ba60 !important;
 }
+
+.recent-posts .avatar {
+	display: inline;
+	float: left;
+	padding-right: 7px;
+	margin: 0px;
+}
+
+.recent-posts .avatar img {
+	border: 1px solid #18BA60;
+	border-radius: 5px;
+	padding: 3px;
+	margin-left: 15px;
+	margin-right: 7px;
+	width: auto;
+	height: auto;
+}
+
+.recent-posts a .title {
+	line-height: 15px;
+}
+
+.recent-post .row p .comment {
+	margin-bottom: 0;
+}
+
+.recent-post .row p {
+	line-height: 1.5em;
+	margin-top: 3px;
+	padding-bottom: 0;
+}

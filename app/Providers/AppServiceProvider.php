@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 use Blade;
 
+use DB;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -18,6 +20,10 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('set', function ($exp) {
             list($name,$value) = explode(',',$exp);
             return "<?php $name = $value ?>";
+        });
+
+        DB::listen(function($query) {
+           // echo '<h1>'.$query->sql.'</h1>';
         });
     }
 

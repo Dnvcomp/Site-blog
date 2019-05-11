@@ -9,3 +9,4 @@
 <p>1.6 The add comments, authors, data.</p>
 <p>1.7 Creating pagination and limiting article entries</p>
 <p>1.8 Creating the right block for the article page</p>
+<p>1.9 Displays comments in the right-left box.</p>
