@@ -71,8 +71,10 @@ class ArticlesController extends DnvcompController
     public function show($alias = false)
     {
         $article = $this->a_rep->one($alias,['comments'=> true]);
-        dd($article);
 
+        if ($article) {
+            $article->img = json_decode($article->img);
+        }
 
         $content = view(env('DNVCOMP').'.article_content')->with('article',$article)->render();
         $this->vars = array_add($this->vars,'content',$content);
