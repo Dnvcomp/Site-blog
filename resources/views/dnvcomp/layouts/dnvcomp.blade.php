@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/bootstrap.min.css.map">
     <!-- Font-Awesome -->
     <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/font-awesome.css">
     <!-- Icomoon -->
@@ -46,7 +47,7 @@
 <!-- Slider -->
 @yield('slider')
 <!-- // Slider -->
-
+<div class="wrap_result"></div>
 <!-- Blog post-->
 <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
     <div class="row-{{ isset($bar) ? $bar : 'no' }}">
@@ -90,6 +91,7 @@
 <script src="{{ asset(env('DNVCOMP')) }}/js/modernizr.js"></script>
 <!-- Main JS -->
 <script src="{{ asset(env('DNVCOMP')) }}/js/main.js"></script>
-
+<script type="text/javascript" src="{{ asset(env('DNVCOMP')) }}/js/comment-reply.js"></script>
+<script type="text/javascript" src="{{ asset(env('DNVCOMP')) }}/js/mycomment.js"></script>
 </body>
 </html>
