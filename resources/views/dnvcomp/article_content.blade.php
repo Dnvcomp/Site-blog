@@ -69,7 +69,7 @@
                 @if(!Auth::check())
                     <div class="form-group">
                         <label for="exampleInputName2">Имя</label>
-                        <input type="text" class="form-control" id="author" name="author" placeholder="Ivan">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ivan">
                     </div>
 
                     <div class="form-group">
@@ -79,19 +79,19 @@
 
                     <div class="form-group">
                         <label for="exampleInputName2">Сайт</label>
-                        <input type="text" class="form-control" id="url" name="url" placeholder="http://podusham.by">
+                        <input type="text" class="form-control" id="url" name="site" placeholder="http://podusham.by">
                     </div>
                 @endif
 
                 <div class="form-group">
                     <label for="comment">Ваш комментарий</label>
-                    <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" placeholder="Введите текст комментария"></textarea>
+                    <textarea class="form-control" id="comment" name="text" cols="45" rows="8" placeholder="Введите текст комментария"></textarea>
                 </div>
 
                 <div class="mt-20"></div>
                     {{ csrf_field() }}
                     <input id="comment_post_ID" type="hidden" name="comment_post_ID" value="{{ $article->id }}">
-                    <input id="comment_parent" type="hidden" name="comment_parent" value="">
+                    <input id="comment_parent" type="hidden" name="comment_parent" value="0">
                     <input name="submit" type="submit" id="submit" value="Post Comment" />
             </form>
         </div>

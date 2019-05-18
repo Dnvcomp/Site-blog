@@ -1,5 +1,5 @@
 @foreach($items as $item)
-    <!-- START COMMENTS -->
+    <!-- START COMMENTS 2 -->
             <li id="li-comment-{{ $item->id }}" class="comment even {{ ($item->user_id == $article->user_id) ? 'bypostauthor odd' : '' }}">
                 <div id="comment-{{ $item->id }}" class="comment-container">
                     <div class="comment-author vcard">
@@ -14,7 +14,7 @@
                                 <a href="#comment-2">{{ is_object($item->created_at) ? $item->created_at->format('F d,Y \a\t H:i') : ''}}</a>
                             </div>
 
-                            <div class="commentNumber"># &nbsp;&nbsp;1</div>
+                            <div class="commentNumber">#&nbsp;&nbsp;1</div>
                         </div>
 
                         <div class="comment-body">

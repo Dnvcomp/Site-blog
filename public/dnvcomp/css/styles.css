@@ -2124,16 +2124,17 @@ blockquote i{
 }
 
 /* Comments */
+
 h3#comments-title {
     margin: 30px 0;
     padding-left: 35px;
-    background: url('../images/icons/comment.png') no-repeat left center
+    background: url('../public/dnvcomp/img/icon/comment.png') no-repeat left center;
 }
 h3#comments-title span {
 }
 .comment-container {
     padding: 5px;
-    border: 1px solid #CFCFCF;
+    border: 1px solid #18ba60;
 }
 .comment-author {
     float: left;
@@ -2141,7 +2142,7 @@ h3#comments-title span {
     max-width: 85px;
 }
 .image-square-style #comments img.avatar {
-    border: 4px solid #CFCFCF;
+    border: 4px solid #18ba60;
 }
 .image-sphere-style #comments img.avatar {
     border: 0;
@@ -2157,7 +2158,7 @@ h3#comments-title span {
     display: block;
 }
 #comments .comment-author img {
-    border: 1px solid #CFCFCF;
+    border: 1px solid #18ba60;
     padding: 3px;
 }
 .comment-meta .reply {
