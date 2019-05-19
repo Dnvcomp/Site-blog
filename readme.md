@@ -14,5 +14,5 @@
 <p>2.1 Separate site material page part-2</p>
 <p>2.2 Font-end comments for add form</p>
 <p>2.3 Saving a comment in the database</p>
-<p>2.4 
-Display a saved comment from the database on the screen 1</p>
+<p>2.4 Display a saved comment from the database on the screen 1</p>
+<p>2.5 Comment, forms and color, meta tegs</p>

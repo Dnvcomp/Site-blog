@@ -23,6 +23,9 @@ class ArticlesController extends DnvcompController
 
     public function index($cat_alias = false)
     {
+        $this->title = 'Статьи';
+        $this->meta_desc = 'Полное описание';
+        $this->keywords = 'Краткое описание';
         $articles = $this->getArticles($cat_alias);
 
         $content = view(env('DNVCOMP').'.articles_content')->with('articles',$articles)->render();
@@ -60,7 +63,7 @@ class ArticlesController extends DnvcompController
             $where = ['category_id',$id];
         }
 
-        $articles = $this->a_rep->get(['id','title','alias','created_at','img','desc','user_id','category_id'],false,true,$where);
+        $articles = $this->a_rep->get(['id','title','alias','created_at','img','desc','user_id','category_id','keywords','meta_desc'],false,true,$where);
 
         if ($articles) {
             $articles->load('user','category','comments');
@@ -75,6 +78,10 @@ class ArticlesController extends DnvcompController
         if ($article) {
             $article->img = json_decode($article->img);
         }
+
+        $this->title = $article->title;
+        $this->keywords = $article->keywords;
+        $this->meta_desc = $article->meta_desc;
 
         $content = view(env('DNVCOMP').'.article_content')->with('article',$article)->render();
         $this->vars = array_add($this->vars,'content',$content);
