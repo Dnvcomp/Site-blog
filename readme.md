@@ -11,5 +11,8 @@
 <p>1.8 Creating the right block for the article page</p>
 <p>1.9 Displays comments in the right-left box.</p>
 <p>2.0 Separate site material page part-1</p>
-<p>2.1 Separate site material page part-2/p>
+<p>2.1 Separate site material page part-2</p>
 <p>2.2 Font-end comments for add form</p>
+<p>2.3 Saving a comment in the database</p>
+<p>2.4 
+Display a saved comment from the database on the screen 1</p>
