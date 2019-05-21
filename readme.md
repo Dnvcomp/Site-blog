@@ -16,4 +16,6 @@
 <p>2.3 Saving a comment in the database.</p>
 <p>2.4 Display a saved comment from the database on the screen.<p>
 <p>2.5 Comment, forms and color, meta tegs.</p>
-<p>2.6 Creation of the author's page and pagination to it</p>
+<p>2.6 Creation of the author's page and pagination to it.</p>
+<p>2.7 Detailed view page portfolio work.</p>
+<p>2.8 The finish page author-portfolio.</p>

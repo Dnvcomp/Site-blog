@@ -12,7 +12,7 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 blockquote">
                                 <p>{!! str_limit($item->text,200) !!}</p>
-                                <a href="{{ route('portfolios.show',['alias'=>$item->alias]) }}" class="button-lg button-primary mt-30" data-duration="1150" data-delay="500">Read More</a>
+                                <a href="{{ route('portfolios.show',['alias'=>$item->alias]) }}" class="button-lg button-primary mt-30" data-duration="1150" data-delay="500">{{ trans('ru.read_more') }}</a>
                             </div>
                         </div>
                     </blockquote>

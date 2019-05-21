@@ -7,7 +7,7 @@
                     <div class="row">
 
                         <div class="col-md-8 col-sm-12 col-xs-12">
-                            <img src="{{ asset(env('DNVCOMP')) }}/img/portfolio/{{ $portfolio->img->max }}" style="width: 750px; height: 385px" alt="blog-image">
+                            <img src="{{ asset(env('DNVCOMP')) }}/img/portfolio/{{ $portfolio->img->max }}" style="width: 750px; height: 385px" alt="Author image">
                         </div>
 
                         <div class="col-md-4 col-sm-12 col-xs-12">
@@ -15,8 +15,10 @@
                                 <h3><a href="{{ route('portfolios.show',['alias'=>$portfolio->alias])}}">{{ $portfolio->title }}</a></h3>
                                 <p>{!! str_limit($portfolio->text,230) !!}</p>
                                 <div class="blog-list-admin">
-                                    by <a href="{{ route('portfolios.show',['alias'=>$portfolio->alias])}}"> {{ $portfolio->title }} </a>
-                                    <span>{{ $portfolio->filter->title }}</span>
+                                    <a href="{{ route('portfolios.show',['alias'=>$portfolio->alias])}}"> {{ trans('ru.read_more') }} </a>
+                                    @if($portfolio->created_at)
+                                        <span style="color: #761c19; font-weight: bold;">{{ $portfolio->created_at->format('d m Y') }}</span>
+                                    @endif
                                 </div>
                             </div>
                         </div>

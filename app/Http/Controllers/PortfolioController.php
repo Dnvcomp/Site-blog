@@ -15,12 +15,11 @@ class PortfolioController extends DnvcompController
         $this->p_rep = $p_rep;
         $this->template = env('DNVCOMP').'.portfolios';
     }
-
     public function index()
     {
-        $this->title = 'Авторы статей';
+        $this->title = 'Авторы';
         $this->keywords = 'Авторы статей';
-        $this->meta_desc = 'Авторы статей';
+        $this->meta_desc = 'Страницы добавленные автором';
 
         $portfolios = $this->getPortfolios();
 
@@ -30,12 +29,27 @@ class PortfolioController extends DnvcompController
         return $this->renderOutput();
     }
 
-    public function getPortfolios()
+    public function getPortfolios($take = false, $paginate = true)
     {
-        $portfolios = $this->p_rep->get('*',false,true);
-        if ($portfolios) {
+        $portfolios = $this->p_rep->get('*',$take,$paginate);
+        if($portfolios) {
             $portfolios->load('filter');
         }
         return $portfolios;
+    }
+
+    public function show($alias)
+    {
+        $portfolio = $this->p_rep->one($alias);
+        $portfolios = $this->getPortfolios(config('settings.other_portfolios'),false);
+
+        $this->title = $portfolio->title;
+        $this->keywords = $portfolio->keywords;
+        $this->meta_desc = $portfolio->meta_desc;
+
+        $content = view(env('DNVCOMP').'.portfolio_content')->with(['portfolio' => $portfolio,'portfolios' => $portfolios])->render();
+        $this->vars = array_add($this->vars,'content',$content);
+
+        return $this->renderOutput();
     }
 }
