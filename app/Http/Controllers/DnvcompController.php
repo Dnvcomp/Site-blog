@@ -42,6 +42,11 @@ class DnvcompController extends Controller
             $this->vars = array_add($this->vars,'rightBar',$rightBar);
         }
 
+        if ($this->contentLeftBar) {
+            $leftBar =view(env('DNVCOMP').'.leftBar')->with('content_leftBar',$this->contentLeftBar)->render();
+            $this->vars = array_add($this->vars,'leftBar',$leftBar);
+        }
+
         $this->vars = array_add($this->vars,'bar',$this->bar);
 
         $this->vars = array_add($this->vars,'keywords',$this->keywords);

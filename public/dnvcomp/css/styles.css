@@ -2347,3 +2347,18 @@ img.comment-avatar {
 	border: 3px solid #18ba60 !important;
 	border-radius: 7px;
 }
+div.error-box {
+	background: url("../img/icon/message/error.png") no-repeat scroll 15px center #fdd2d1;
+	border: 1px solid #f6988f;
+	padding-left: 22px;
+	padding-top: 5px;
+	color: #883333;
+}
+
+div.info-box {
+	background: url("../img/icon/message/info.png") no-repeat scroll 15px center #f9ebca;
+	border: 1px solid #89becd;
+	padding-top: 5px;
+	padding-left: 22px;
+	color: #277dce;
+}

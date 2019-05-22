@@ -19,3 +19,4 @@
 <p>2.6 Creation of the author's page and pagination to it.</p>
 <p>2.7 Detailed view page portfolio work.</p>
 <p>2.8 The finish page author-portfolio.</p>
+<p>2.9 The finish page contacts.</p>
