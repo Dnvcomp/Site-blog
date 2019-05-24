@@ -1810,38 +1810,34 @@ blockquote i{
 /*-----------------------------------------
 23. 404 Page
 -------------------------------------------*/
-.big-background{    
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    padding: 200px 0px 200px 0px;
-}   
-
-
 .block-404 {
     text-align: center;
 }
 
 .block-404 h1{
-    font-size: 100px;
-    font-weight: 100;
-    color: #fff;
+	color: #0D954A;
 }
 
 .block-404 h2{
     font-size: 30px;
     font-weight: 500;
-    color: #fff;
+    color: #263B52;
 }
 
 .block-404 h4{
     font-size: 20px;
     font-weight: 500;
-    color: #fff;
+    color: #263B52;
     margin-top: 10px;
-}   
+}
 
-
+.block-404 p {
+	font-size: 16px;
+	text-align: center;
+	font-weight: 400;
+	margin-top: 12px;
+	color: #122b40;
+}
 /*-----------------------------------------
 24. Forms
 -------------------------------------------*/

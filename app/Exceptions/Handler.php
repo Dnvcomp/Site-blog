@@ -45,6 +45,16 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if($this->isHttpException($e)) {
+            $statusCode = $e->getStatusCode();
+            switch ($statusCode) {
+                case '404' :
+                $obj = new \Dnvcomp\Http\Controllers\DnvcompController(new \Dnvcomp\Repositories\MenusRepository(new \Dnvcomp\Menu));
+                $navigation = view(env('DNVCOMP').'.navigation')->with('menu',$obj->getMenu())->render();
+                \Log::alert('Страница не найдена -!'. $request->url());
+                return response()->view(env('DNVCOMP').'.404',['bar'=>'no','title'=>'Страница не найдена','navigation'=>$navigation]);
+            }
+        }
         return parent::render($request, $e);
     }
 }
