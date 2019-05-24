@@ -28,7 +28,9 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $loginView;
+    protected $username = 'login';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new authentication controller instance.
@@ -38,6 +40,16 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        $this->loginView = env('DNVCOMP').'.login';
+    }
+
+    public function showLoginForm()
+    {
+        $view = property_exists($this,'loginView') ? $this->loginView : '';
+        if (view()->exists($view)) {
+            return view($view)->with('title','Аутентификация');
+        }
+        abort(404);
     }
 
     /**
