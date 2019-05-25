@@ -22,3 +22,5 @@
 <p>2.9 The finish page contacts.</p>
 <p>3.0 The finish page error 404, add files errors logs.</p>
 <p>3.1 Page authentification for admin panel.</p>
+<p>3.2 The private section of the administrative part.</p>
+<p>3.3 Main page of the administrative panel.</p>
