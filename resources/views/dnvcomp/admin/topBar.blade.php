@@ -4,12 +4,12 @@
             <div class="col-md-9 col-xs-12">
                 <ul class="top-bar-info">
                     <li><i class="fa fa-clock-o"></i>Time: Tusday-Monday : 9:00am-6:00pm</li>
-                    <li><i class="fa fa-phone"></i> Phone:  +1-23-456789</li>
-                    <li><i class="fa fa-envelope-o"></i>Email:  example@email.com</li>
+                    <li><i class="fa fa-phone"></i>Административная панель</li>
+                    <li><i class="fa fa-envelope-o"></i>Email:  dnvcomp@hotmail.com</li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12 right-holder hidden-sm">
-                <a href="{{ url('login') }}" class="top-appoinment">Войти</a>
+                <a href="{{ url('logout') }}" class="top-appoinment">Выход</a>
             </div>
         </div>
     </div>

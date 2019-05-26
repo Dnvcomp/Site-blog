@@ -25,3 +25,4 @@
 <p>3.2 The private section of the administrative part.</p>
 <p>3.3 Main page of the administrative panel.</p>
 <p>3.4 User rights and privileges.</p>
+<p>3.5 Methods of checking user rightsMethods of checking user rights.</p>

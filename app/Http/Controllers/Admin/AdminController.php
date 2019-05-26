@@ -30,8 +30,13 @@ class AdminController extends \Dnvcomp\Http\Controllers\Controller
     {
         $this->vars = array_add($this->vars,'title',$this->title);
         $menu = $this->getMenu();
+
         $navigation = view(env('DNVCOMP').'.admin.navigation')->with('menu',$menu)->render();
         $this->vars = array_add($this->vars,'navigation',$navigation);
+
+        $topBar = view(env('DNVCOMP').'.admin.topBar')->render();
+        $this->vars = array_add($this->vars,'topBar',$topBar);
+
         if ($this->content) {
             $this->vars = array_add($this->vars,'content',$this->content);
         }

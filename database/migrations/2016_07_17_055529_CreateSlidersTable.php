@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFiltersTable extends Migration
+class CreateSlidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,13 @@ class CreateFiltersTable extends Migration
      */
     public function up()
     {
-        Schema::create('filters', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('alias')->unique();
+            
+            $table->string('img');
+			$table->text('desc');
+			$table->string('title');
+            
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateFiltersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('filters');
+        Schema::drop('sliders');
     }
 }

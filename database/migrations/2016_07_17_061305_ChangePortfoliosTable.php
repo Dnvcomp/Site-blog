@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ChangePortfoliosTable2 extends Migration
+class ChangePortfoliosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class ChangePortfoliosTable2 extends Migration
     public function up()
     {
         Schema::table('portfolios', function (Blueprint $table) {
-            $table->string('keywords');
-            $table->string('meta_desc');
+            //
+            
+            $table->string('filter_alias'); 
+            $table->foreign('filter_alias')->references('alias')->on('filters');
         });
     }
 

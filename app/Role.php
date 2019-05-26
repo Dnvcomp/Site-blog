@@ -13,6 +13,6 @@ class Role extends Model
 
     public function perms()
     {
-        return $this->belongsToMany('Dnvcomp\Permission','role_user');
+        return $this->belongsToMany('Dnvcomp\Permission','permission_role');
     }
 }
