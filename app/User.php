@@ -28,4 +28,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('Dnvcomp\Article');
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany('Dnvcomp\Role','role_user');
+    }
 }
