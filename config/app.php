@@ -155,7 +155,9 @@ return [
         Dnvcomp\Providers\AuthServiceProvider::class,
         Dnvcomp\Providers\EventServiceProvider::class,
         Dnvcomp\Providers\RouteServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
+
 
     ],
 
@@ -202,6 +204,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html'=> Collective\Html\Htmlfacade::class,
         'Menu' => Lavary\Menu\Facade::class,
     ],
 

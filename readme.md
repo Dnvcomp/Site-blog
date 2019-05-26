@@ -26,3 +26,4 @@
 <p>3.3 Main page of the administrative panel.</p>
 <p>3.4 User rights and privileges.</p>
 <p>3.5 Methods of checking user rightsMethods of checking user rights.</p>
+<p>3.6 Main page of materials and articles management.</p>
