@@ -1,4 +1,4 @@
-<!DOCTY html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,7 @@
     <!-- Main Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/default.css">
     <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/styles.css">
+    <script src="{{ asset(env('DNVCOMP')) }}/js/ckeditor/ckeditor.js"></script>
     <!-- Fonts Google -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 </head>
@@ -97,17 +98,10 @@
 <!-- Countup -->
 <script src="{{ asset(env('DNVCOMP')) }}/js/jquery.counterup.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-<!-- Isotop -->
 <script type="text/javascript" src="{{ asset(env('DNVCOMP')) }}/js/isotope.pkgd.min.js"></script>
-<!-- Tabs -->
 <script type="text/javascript" src="{{ asset(env('DNVCOMP')) }}/js/tabs.min.js"></script>
-<!-- Modernizr -->
 <script src="{{ asset(env('DNVCOMP')) }}/js/modernizr.js"></script>
-<!-- Main JS -->
 <script src="{{ asset(env('DNVCOMP')) }}/js/main.js"></script>
-<script type="text/javascript" src="{{ asset(env('DNVCOMP')) }}/js/comment-reply.js"></script>
-<script type="text/javascript" src="{{ asset(env('DNVCOMP')) }}/js/mycomment.js"></script>
-<script src="{{ asset(env('DNVCOMP')) }}/js/ckeditor/ckeditor.js"></script>
 <script src="{{ asset(env('DNVCOMP')) }}/js/bootstrap-filestyle.min.js"></script>
 </body>
 </html>

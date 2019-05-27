@@ -2375,3 +2375,13 @@ div.info-box {
 .th-succ {
 	color: #122b40;
 }
+
+.primary-form label span.sublabel {
+	font-family: 'Calibri', 'Droid Sans', Verdana, Arial, sans-serif;
+	font-size: 24px;
+	color: #122b40;
+}
+
+.input-prepend {
+	position: relative;
+}
