@@ -2,13 +2,13 @@
 
 namespace Dnvcomp\Http\Controllers\Admin;
 
-use Dnvcomp\Category;
 use Illuminate\Http\Request;
+use Dnvcomp\Http\Requests\ArticleRequest;
 use Dnvcomp\Http\Requests;
 use Dnvcomp\Http\Controllers\Controller;
 use Dnvcomp\Repositories\ArticlesRepository;
 use Gate;
-
+use Dnvcomp\Category;
 
 class ArticlesController extends AdminController
 {
@@ -71,11 +71,14 @@ class ArticlesController extends AdminController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-        //
+        $result = $this->a_rep->addArticle($request);
+        if (is_array($result) && !empty(['error'])) {
+            return back()->with($result);
+        }
+        return redirect('/admin')->with($result);
     }
-
     /**
      * Display the specified resource.
      *
