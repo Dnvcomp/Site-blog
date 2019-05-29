@@ -7,5 +7,15 @@ return [
     'paginate' => 2,
     'recent_comments' => 3,
     'recent_portfolios' => 3,
-    'other_portfolios' => 8
+    'other_portfolios' => 8,
+    'articles_img' => [
+        'max' => ['width' => 292, 'height' => 219],
+        'mini' => ['width' => 116, 'height' => 87]
+
+    ],
+
+    'image' => [
+        'width' => 750,
+        'height' => 422
+    ],
 ];
