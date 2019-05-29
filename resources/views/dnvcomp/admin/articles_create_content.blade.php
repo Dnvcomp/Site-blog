@@ -39,7 +39,7 @@
                         <label>
                             <span class="label">Изовражение материала</span>
                         </label>
-                        {{ HTML::image(asset(env('THEME')).'/images/articles/'.$article->img->path,'',['style'=>'width:400px']) }}
+                        {{ Html::image(asset(env('THEME')).'/images/articles/'.$article->img->path,'',['style'=>'width:400px']) }}
                         {!! Form::hidden('old_image',$article->img->path) !!}
                     </li>
                     @endif
