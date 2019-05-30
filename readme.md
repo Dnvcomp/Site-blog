@@ -31,3 +31,4 @@
 <p>3.8 Save new material to the database (transliterate), part-1.</p>
 <p>3.9 Edit materials add articles</p>
 <p>4.0 Update materials articles</p>
+<p>4.1 Delete materials</p>
