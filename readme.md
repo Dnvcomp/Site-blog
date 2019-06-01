@@ -33,3 +33,4 @@
 <p>4.0 Update materials articles</p>
 <p>4.1 Delete materials</p>
 <p>4.2 Editing user rights</p>
+<p>4.3 Create menu admin panel</p>
