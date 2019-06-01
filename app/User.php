@@ -24,41 +24,38 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function articles()
-    {
+    public function articles() {
         return $this->hasMany('Dnvcomp\Article');
     }
 
-    public function roles()
-    {
+
+    public function roles() {
         return $this->belongsToMany('Dnvcomp\Role','role_user');
     }
 
-    public function canDo($permission,$require = false)
-    {
-        if (is_array($permission)) {
-            foreach ($permission as $permName) {
+    public function canDo($permission, $require = FALSE) {
+        if(is_array($permission)) {
+            foreach($permission as $permName) {
                 $permName = $this->canDo($permName);
                 if($permName && !$require) {
-                    return true;
+                    return TRUE;
                 }
-                else if (!$permName && $require) {
-                    return false;
+                else if(!$permName  && $require) {
+                    return FALSE;
                 }
             }
-            return $require;
+            return  $require;
         }
         else {
-             foreach ($this->roles as $role) {
-                 foreach ($role->perms as $perm) {
-                     if(str_is($permission,$perm->name)) {
-                         return true;
-                     }
-                 }
-             }
+            foreach($this->roles as $role) {
+                foreach($role->perms as $perm) {
+                    if(str_is($permission,$perm->name)) {
+                        return TRUE;
+                    }
+                }
+            }
         }
     }
-
     public function hasRole($name, $require = false)
     {
         if (is_array($name)) {

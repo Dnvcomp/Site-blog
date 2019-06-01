@@ -6,13 +6,33 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    public function users()
-    {
+    public function users() {
         return $this->belongsToMany('Dnvcomp\User','role_user');
     }
 
-    public function perms()
-    {
+    public function perms() {
         return $this->belongsToMany('Dnvcomp\Permission','permission_role');
     }
+    public function hasPermission($name, $require = false)
+    {
+        if (is_array($name)) {
+            foreach ($name as $permissionName) {
+                $hasPermission = $this->hasPermission($permissionName);
+                if ($hasPermission && !$require) {
+                    return true;
+                } elseif (!$hasPermission && $require) {
+                    return false;
+                }
+            }
+            return $require;
+        } else {
+            foreach ($this->perms as $permission) {
+                if ($permission->name == $name) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
+
