@@ -1,6 +1,6 @@
 @foreach($items as $item)
     <tr>
-        <td style="text-align: left;">{{ $paddingLeft }} {!! Html::link(route('admin.menus.edit',['menus' => $item->id]),$item->title) !!}</td>
+        <td>{{ $paddingLeft }} {!! Html::link(route('admin.menus.edit',['menus' => $item->id]),$item->title) !!}</td>
         <td>{{ $item->url() }}</td>
         <td>
             {!! Form::open(['url' => route('admin.menus.destroy',['menus'=> $item->id]),'class'=>'form-horizontal','method'=>'POST']) !!}

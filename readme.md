@@ -29,8 +29,9 @@
 <p>3.6 Main page of materials and articles management.</p>
 <p>3.7 New material addition form</p>
 <p>3.8 Save new material to the database (transliterate), part-1.</p>
-<p>3.9 Edit materials add articles</p>
-<p>4.0 Update materials articles</p>
-<p>4.1 Delete materials</p>
-<p>4.2 Editing user rights</p>
-<p>4.3 Create menu admin panel</p>
+<p>3.9 Edit materials add articles.</p>
+<p>4.0 Update materials articles.</p>
+<p>4.1 Delete materials.</p>
+<p>4.2 Editing user rights.</p>
+<p>4.3 Create menu admin panel.</p>
+<p>4.4 Add new item page.</p>

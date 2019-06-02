@@ -1,19 +1,26 @@
-<div id="content-page" class="content group">
-    <div class="hentry group">
-        <h3 class="title_page">Пользователи</h3>
-        <div class="short-table white">
-            <table style="width: 100%" cellspacing="0" cellpadding="0">
-                <thead>
-                <th>Name</th>
-                <th>Link</th>
-                <th>Удалить</th>
-                </thead>
-                @if($menus)
-                    @include(env('DNVCOMP').'.admin.custom-menu-items', array('items' => $menus->roots(),'paddingLeft' => ''))
-                @endif
-            </table>
+<div class="section-block-grey">
+    <div class="container">
+        <div cl
+        <div class="section-heading center-holder">
+            <h2>Навигационное меню</h2>
+            <p>Удаление и добавление ссылок меню в навигации сайта</p>
         </div>
-        {!! HTML::link(route('admin.menus.create'),'Добавить  пункт',['class' => 'btn btn-success']) !!}
-
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th><h4 style="color:#3B526B;">Название</h4></th>
+                            <th><h4 style="color:#3B526B;">Ссылка</h4></th>
+                            <th><h4 style="color:darkred;">Удалить</h4></th>
+                        </tr>
+                    </thead>
+                    @if($menus)
+                        @include(env('DNVCOMP').'.admin.custom-menu-items', array('items' => $menus->roots(),'paddingLeft' => ''))
+                    @endif
+                </table>
+            </div>
+            {!! Html::link(route('admin.menus.create'),'Добавить  пункт',['class' => 'btn btn-success']) !!}
+        </div>
     </div>
 </div>
