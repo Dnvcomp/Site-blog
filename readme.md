@@ -35,3 +35,4 @@
 <p>4.2 Editing user rights.</p>
 <p>4.3 Create menu admin panel.</p>
 <p>4.4 Add new item page.</p>
+<p>4.5 Design of the navigation menu style</p>
