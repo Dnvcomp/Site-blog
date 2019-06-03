@@ -1,6 +1,7 @@
 <h1>Create Dnvcomp blog</h1>
 <h2>Creating a corporate blog to add articles and materials.</h2>
-
+<br>
+<img src="../../public/dnvcomp/img/podusham.png" alt="Podusham">
 <p>1.1 Content update and settings framework Laravel.</p>
 <p>1.2 Update images and create files in json decode.</p>
 <p>1.3 The left block in left side.</p>
