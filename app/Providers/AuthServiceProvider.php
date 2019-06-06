@@ -7,8 +7,10 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 
 use Dnvcomp\Article;
 use Dnvcomp\Permission;
+use Dnvcomp\Menu;
 use Dnvcomp\Policies\ArticlePolicy;
 use Dnvcomp\Policies\PermissionPolicy;
+use Dnvcomp\Policies\MenusPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -19,7 +21,9 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         Article::class => ArticlePolicy::class,
-        Permission::class => PermissionPolicy::class
+        Permission::class => PermissionPolicy::class,
+        Menu::class => MenusPolicy::class,
+
     ];
 
     /**

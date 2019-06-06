@@ -22,6 +22,7 @@
     <!-- Main Styles -->
     <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/default.css">
     <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset(env('DNVCOMP')) }}/css/jquery-ui.css">
     <script src="{{ asset(env('DNVCOMP')) }}/js/ckeditor/ckeditor.js"></script>
     <!-- Fonts Google -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&amp;subset=latin-ext,vietnamese" rel="stylesheet">
@@ -90,6 +91,8 @@
 <script src="{{ asset(env('DNVCOMP')) }}/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- Pogo Slider -->
 <script src="{{ asset(env('DNVCOMP')) }}/js/jquery.pogo-slider.min.js"></script>
+<script src="{{ asset(env('DNVCOMP')) }}/js/jquery-ui.js"></script>
+
 <script src="{{ asset(env('DNVCOMP')) }}/js/pogo-main.js"></script>
 <!-- Owl Carousel-->
 <script src="{{ asset(env('DNVCOMP')) }}/js/owl.carousel.js"></script>

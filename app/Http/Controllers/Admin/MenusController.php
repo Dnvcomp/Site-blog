@@ -4,6 +4,7 @@ namespace Dnvcomp\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Dnvcomp\Http\Requests;
+use Dnvcomp\Http\Requests\MenusRequest;
 use Dnvcomp\Http\Controllers\Controller;
 use Dnvcomp\Repositories\MenusRepository;
 use Dnvcomp\Repositories\ArticlesRepository;
@@ -113,9 +114,13 @@ class MenusController extends AdminController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MenusRequest $request)
     {
-        //
+        $result = $this->m_rep->addMenu($request);
+        if (is_array($result) && !empty($result['error'])) {
+            return back()->with($result);
+        }
+        return redirect('/admin')->with($result);
     }
 
     /**
