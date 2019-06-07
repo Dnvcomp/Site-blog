@@ -39,4 +39,5 @@
 <p>4.5 Design of the navigation menu style.</p>
 <p>4.6 Jquery-ui-css and Jquery-ui-js.</p>
 <p>4.7 Saving a new link.</p>
-<p>4.8 Page edit menu</p>
+<p>4.8 Page edit menu.</p>
+<p>4.9 Remove and update information link from the menu section.</p>
