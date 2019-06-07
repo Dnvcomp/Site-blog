@@ -29,6 +29,9 @@ class RouteServiceProvider extends ServiceProvider
         $router->bind('articles', function($value) {
             return \Dnvcomp\Article::where('alias',$value)->first();
         });
+        $router->bind('menus', function ($value) {
+            return \Dnvcomp\Menu::where('id',$value)->first();
+        });
     }
 
     /**
