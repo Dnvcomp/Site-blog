@@ -1,7 +1,5 @@
 <h1>Create Dnvcomp blog</h1>
 <h2>Creating a corporate blog to add articles and materials.</h2>
-<br>
-<img src="../../public/dnvcomp/img/podusham.png" alt="Podusham">
 <p>1.1 Content update and settings framework Laravel.</p>
 <p>1.2 Update images and create files in json decode.</p>
 <p>1.3 The left block in left side.</p>
@@ -36,8 +34,5 @@
 <p>4.2 Editing user rights.</p>
 <p>4.3 Create menu admin panel.</p>
 <p>4.4 Add new item page.</p>
-<p>4.5 Design of the navigation menu style.</p>
-<p>4.6 Jquery-ui-css and Jquery-ui-js.</p>
-<p>4.7 Saving a new link.</p>
-<p>4.8 Page edit menu.</p>
-<p>4.9 Remove and update information link from the menu section.</p>
+<p>4.5 Design of the navigation menu style</p>
+<p>4.6 User rights admin panel.</p>

@@ -1,6 +1,5 @@
 <div class="section-block-grey">
     <div class="container">
-        <div cl
         <div class="section-heading center-holder">
             <h2>Навигационное меню</h2>
             <p>Удаление и добавление ссылок меню в навигации сайта</p>
